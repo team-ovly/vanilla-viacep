@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 	
 	<head>
 		<meta charset="UTF-8">
@@ -16,10 +16,14 @@
 		</header>
 		
 		<main>
-			<input id="cep" placeholder="Digite o CEP" />
-			<button onclick="buscaCep()">Buscar CEP</button><br>
+			<input id="cep" type="number" pattern="[0-9]" 
+				placeholder="Digite o CEP" onkeyup="onDigitaCep()" />
+			<button disabled onclick="buscaCep()">Buscar CEP</button><br>
+			<br />
+			<p id="erro" hidden>
+				<span>CEP não encontrado/inválido</span>
+			</p>
 			<form hidden >
-			  CEP: <input disabled type="text" name="cep"><br>
 			  Logradouro: <input disabled type="text" name="logradouro"><br>
 			  Bairro: <input disabled type="text" name="bairro"><br>
 			  Estado: <input disabled type="text" name="estado"><br>
