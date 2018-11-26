@@ -21,6 +21,7 @@ function onSuccess(data) {
 	$("input[name='logradouro']").val(data.logradouro);
 	$("input[name='bairro']").val(data.logradouro);
 	$("input[name='estado']").val(data.uf);
+	$("form").show();
 }
 
 window.onload = function () {
