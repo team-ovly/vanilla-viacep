@@ -19,8 +19,6 @@
 				var url = new URL(window.location);
 				var params = new URLSearchParams(url.search);
 				var sCep = params.get("cep");
-				
-				
 				$.get(createViaCEPUrl(sCep), onSuccess)
 			}
 			
